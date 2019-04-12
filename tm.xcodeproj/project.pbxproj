@@ -15,6 +15,7 @@
 		1ECBD4DA225D4032005051CC /* MyDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4D9225D4032005051CC /* MyDismissSegue.swift */; };
 		1ECBD4DC225D41B7005051CC /* APIStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4DB225D41B7005051CC /* APIStatusViewController.swift */; };
 		1ECBD4DE225D42BB005051CC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4DD225D42BB005051CC /* Networking.swift */; };
+		1ECBD4E02260D778005051CC /* DocumentsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4DF2260D778005051CC /* DocumentsInputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1ECBD4D9225D4032005051CC /* MyDismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDismissSegue.swift; sourceTree = "<group>"; };
 		1ECBD4DB225D41B7005051CC /* APIStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStatusViewController.swift; sourceTree = "<group>"; };
 		1ECBD4DD225D42BB005051CC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1ECBD4DF2260D778005051CC /* DocumentsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsInputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				1ECBD4D3225D3ADB005051CC /* Info.plist */,
 				1ECBD4D9225D4032005051CC /* MyDismissSegue.swift */,
 				1ECBD4DB225D41B7005051CC /* APIStatusViewController.swift */,
+				1ECBD4DF2260D778005051CC /* DocumentsInputViewController.swift */,
 				1ECBD4DD225D42BB005051CC /* Networking.swift */,
 			);
 			path = tm;
@@ -146,6 +149,7 @@
 			files = (
 				1ECBD4CA225D3ADA005051CC /* ViewController.swift in Sources */,
 				1ECBD4DE225D42BB005051CC /* Networking.swift in Sources */,
+				1ECBD4E02260D778005051CC /* DocumentsInputViewController.swift in Sources */,
 				1ECBD4DC225D41B7005051CC /* APIStatusViewController.swift in Sources */,
 				1ECBD4DA225D4032005051CC /* MyDismissSegue.swift in Sources */,
 				1ECBD4C8225D3ADA005051CC /* AppDelegate.swift in Sources */,
