@@ -157,8 +157,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-I0-gY1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-I0-gY1">
                                 <rect key="frame" x="165.5" y="692" width="83" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="run"/>
                                 <connections>
@@ -168,32 +169,28 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="07k-Et-bxF">
                                 <rect key="frame" x="197" y="724" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oN-lV-2JK">
-                                <rect key="frame" x="128" y="698" width="158" height="72"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q92-zO-VmN">
+                                <rect key="frame" x="192" y="699" width="30" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2oN-lV-2JK" firstAttribute="baseline" secondItem="oQK-I0-gY1" secondAttribute="baseline" id="0Mz-rH-Gyc"/>
+                            <constraint firstItem="q92-zO-VmN" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="4VY-nU-bx2"/>
                             <constraint firstItem="07k-Et-bxF" firstAttribute="centerX" secondItem="OmS-sH-oOh" secondAttribute="centerX" id="EOl-IL-KK8"/>
                             <constraint firstItem="lOn-LM-srC" firstAttribute="trailing" secondItem="h7x-uX-1SE" secondAttribute="trailing" constant="128" id="LOB-C4-Aiy"/>
+                            <constraint firstItem="h7x-uX-1SE" firstAttribute="top" secondItem="q92-zO-VmN" secondAttribute="bottom" constant="-5" id="OCu-ru-QM8"/>
                             <constraint firstItem="07k-Et-bxF" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="P0i-DG-hUb"/>
-                            <constraint firstItem="2oN-lV-2JK" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="Tls-XS-duR"/>
                             <constraint firstItem="h7x-uX-1SE" firstAttribute="top" secondItem="07k-Et-bxF" secondAttribute="bottom" constant="34" id="V3J-6j-h5s"/>
                             <constraint firstItem="OmS-sH-oOh" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="V7P-YN-eHk"/>
-                            <constraint firstItem="h7x-uX-1SE" firstAttribute="top" secondItem="2oN-lV-2JK" secondAttribute="bottom" constant="8" id="fnQ-xX-9fA"/>
                             <constraint firstItem="h7x-uX-1SE" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="ro6-5q-Cwl"/>
                             <constraint firstItem="OmS-sH-oOh" firstAttribute="top" secondItem="lOn-LM-srC" secondAttribute="top" id="sMA-QK-ETW"/>
-                            <constraint firstItem="2oN-lV-2JK" firstAttribute="centerX" secondItem="oQK-I0-gY1" secondAttribute="centerX" id="wvE-YQ-Tfd"/>
                             <constraint firstItem="h7x-uX-1SE" firstAttribute="bottom" secondItem="lOn-LM-srC" secondAttribute="bottom" id="x26-dH-Zrn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lOn-LM-srC"/>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="2oN-lV-2JK" id="mgc-0s-SHP"/>
+                        <outlet property="resultsButton" destination="q92-zO-VmN" id="DFb-b1-PwR"/>
                         <outlet property="runButton" destination="oQK-I0-gY1" id="Seg-kv-YRE"/>
                         <outlet property="runningSpinner" destination="07k-Et-bxF" id="5Od-GJ-ENQ"/>
                         <outlet property="textTextField" destination="6xI-ww-NF3" id="n0r-HZ-exd"/>

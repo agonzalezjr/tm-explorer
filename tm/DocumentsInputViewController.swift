@@ -14,7 +14,7 @@ class DocumentsInputViewController: UIViewController {
   @IBOutlet weak var textTextField: UITextField!
   @IBOutlet weak var runButton: UIButton!
   @IBOutlet weak var runningSpinner: UIActivityIndicatorView!
-  @IBOutlet weak var resultLabel: UILabel!
+  @IBOutlet weak var resultsButton: UIButton!
 
   override func viewDidLoad() {
     self.textTextField.text = "Mickey Mouse"
@@ -23,16 +23,16 @@ class DocumentsInputViewController: UIViewController {
   func success(_ count: Int) {
     DispatchQueue.main.async {
       self.runningSpinner.isHidden = true
-      self.resultLabel.text = "\(count) >"
-      self.resultLabel.isHidden = false
+      self.resultsButton.setTitle("\(count) >", for: .normal)
+      self.resultsButton.isHidden = false
     }
   }
 
   func failure() {
     DispatchQueue.main.async {
       self.runningSpinner.isHidden = true
-      self.resultLabel.text = "⛔️"
-      self.resultLabel.isHidden = false
+      self.resultsButton.setTitle("⛔️", for: .normal)
+      self.resultsButton.isHidden = false
     }
   }
 
