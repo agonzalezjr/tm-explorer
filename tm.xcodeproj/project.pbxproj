@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E630575226276B400F5F2D7 /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E630574226276B400F5F2D7 /* DocumentsViewController.swift */; };
 		1ECBD4C8225D3ADA005051CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4C7225D3ADA005051CC /* AppDelegate.swift */; };
 		1ECBD4CA225D3ADA005051CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD4C9225D3ADA005051CC /* ViewController.swift */; };
 		1ECBD4CD225D3ADA005051CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECBD4CB225D3ADA005051CC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E630574226276B400F5F2D7 /* DocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
 		1ECBD4C4225D3ADA005051CC /* tm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECBD4C7225D3ADA005051CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ECBD4C9225D3ADA005051CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1ECBD4DB225D41B7005051CC /* APIStatusViewController.swift */,
 				1ECBD4DF2260D778005051CC /* DocumentsInputViewController.swift */,
 				1ECBD4DD225D42BB005051CC /* Networking.swift */,
+				1E630574226276B400F5F2D7 /* DocumentsViewController.swift */,
 			);
 			path = tm;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				1ECBD4DC225D41B7005051CC /* APIStatusViewController.swift in Sources */,
 				1ECBD4DA225D4032005051CC /* MyDismissSegue.swift in Sources */,
 				1ECBD4C8225D3ADA005051CC /* AppDelegate.swift in Sources */,
+				1E630575226276B400F5F2D7 /* DocumentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
