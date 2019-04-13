@@ -212,12 +212,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cpO-9m-Zcc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="markCell" id="cpO-9m-Zcc">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cpO-9m-Zcc" id="t7r-9E-W1G">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="12345" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ze-Us-vQr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Ze-Us-vQr" firstAttribute="width" secondItem="t7r-9E-W1G" secondAttribute="width" id="AxA-vv-HeY"/>
+                                        <constraint firstItem="9Ze-Us-vQr" firstAttribute="centerY" secondItem="t7r-9E-W1G" secondAttribute="centerY" id="eTs-6I-eb1"/>
+                                        <constraint firstItem="9Ze-Us-vQr" firstAttribute="centerX" secondItem="t7r-9E-W1G" secondAttribute="centerX" id="lor-tM-LED"/>
+                                        <constraint firstItem="9Ze-Us-vQr" firstAttribute="height" secondItem="t7r-9E-W1G" secondAttribute="height" id="x4l-eb-HRo"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

@@ -9,12 +9,29 @@
 import Foundation
 import UIKit
 
+struct Doc: Decodable {
+  let tsdrStatusUrl: String
+  let tsdrImageOriginal: String
+}
+
+struct Response: Decodable {
+  let docs: [Doc]
+  let numFound: Int
+  let start: Int
+}
+
+struct Documents: Decodable {
+  let response: Response
+}
+
 class DocumentsInputViewController: UIViewController {
 
   @IBOutlet weak var textTextField: UITextField!
   @IBOutlet weak var runButton: UIButton!
   @IBOutlet weak var runningSpinner: UIActivityIndicatorView!
   @IBOutlet weak var resultsButton: UIButton!
+
+  var response: Response?
 
   override func viewDidLoad() {
     self.textTextField.text = "Mickey Mouse"
@@ -36,20 +53,6 @@ class DocumentsInputViewController: UIViewController {
     }
   }
 
-  struct Doc: Decodable {
-    let tsdrStatusUrl: String
-  }
-
-  struct Response: Decodable {
-    let docs: [Doc]
-    let numFound: Int
-    let start: Int
-  }
-
-  struct Documents: Decodable {
-    let response: Response
-  }
-
   @IBAction func run(_ sender: Any) {
 
     runButton.isHidden = true
@@ -63,6 +66,7 @@ class DocumentsInputViewController: UIViewController {
       switch result {
       case .success(let response):
         if let documentsResponse = try? response.decode(to: Documents.self) {
+          self.response = documentsResponse.body.response
           self.success(documentsResponse.body.response.numFound)
         } else {
           self.failure()
@@ -70,6 +74,13 @@ class DocumentsInputViewController: UIViewController {
       case .failure:
         self.failure()
       }
+    }
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let navVC = segue.destination as? UINavigationController,
+      let topVC = navVC.topViewController as? DocumentsViewController {
+      topVC.response = response
     }
   }
 }
