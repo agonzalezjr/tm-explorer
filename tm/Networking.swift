@@ -20,7 +20,7 @@ struct HTTPHeader {
 class APIRequest {
   let method: HTTPMethod
   let path: String
-  var queryItems: [URLQueryItem]?
+  var queryItems: [URLQueryItem] = []
   var headers: [HTTPHeader]?
   var body: Data?
 
@@ -45,6 +45,11 @@ extension APIResponse where Body == Data? {
   func decode<BodyType: Decodable>(to type: BodyType.Type) throws -> APIResponse<BodyType> {
     guard let data = body else {
       throw APIError.decodingFailure
+    }
+    do {
+      let decodedJSON = try JSONDecoder().decode(BodyType.self, from: data)
+    } catch let error {
+      print(error)
     }
     let decodedJSON = try JSONDecoder().decode(BodyType.self, from: data)
     return APIResponse<BodyType>(statusCode: self.statusCode,
@@ -87,6 +92,8 @@ struct APIClient {
     urlRequest.httpBody = request.body
 
     request.headers?.forEach { urlRequest.addValue($0.value, forHTTPHeaderField: $0.field) }
+
+    print("urlRequest = \(urlRequest.debugDescription)")
 
     let task = session.dataTask(with: urlRequest) { (data, response, error) in
       guard let httpResponse = response as? HTTPURLResponse else {

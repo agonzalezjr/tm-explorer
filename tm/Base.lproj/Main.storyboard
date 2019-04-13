@@ -85,17 +85,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbd-o3-ezT">
-                                <rect key="frame" x="162" y="778" width="90" height="84"/>
+                                <rect key="frame" x="138" y="778" width="139" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="exit">
+                                <state key="normal" title="&lt; exit">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="custom" customClass="MyDismissSegue" customModule="tm" customModuleProvider="target" id="VNk-c0-Nsi"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-uP-ckB">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-uP-ckB">
                                 <rect key="frame" x="197" y="443" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afR-S6-ykM">
@@ -134,31 +134,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmS-sH-oOh">
-                                <rect key="frame" x="55" y="44" width="305" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmS-sH-oOh">
+                                <rect key="frame" x="54.5" y="44" width="305" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-uX-1SE">
-                                <rect key="frame" x="162" y="778" width="90" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7x-uX-1SE">
+                                <rect key="frame" x="128" y="778" width="158" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="exit">
+                                <state key="normal" title="&lt; exit">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="custom" customClass="MyDismissSegue" customModule="tm" customModuleProvider="target" id="vCj-nS-GWP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-I0-gY1">
-                                <rect key="frame" x="166" y="692" width="83" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="run"/>
-                                <connections>
-                                    <action selector="runTapped:" destination="q9e-ez-0dW" eventType="touchUpInside" id="cAB-1J-RO1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-ww-NF3">
@@ -168,12 +157,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-I0-gY1">
+                                <rect key="frame" x="165.5" y="692" width="83" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="run"/>
+                                <connections>
+                                    <action selector="run:" destination="q9e-ez-0dW" eventType="touchUpInside" id="wK9-qP-HOj"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="07k-Et-bxF">
+                                <rect key="frame" x="197" y="724" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oN-lV-2JK">
+                                <rect key="frame" x="128" y="698" width="158" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2oN-lV-2JK" firstAttribute="baseline" secondItem="oQK-I0-gY1" secondAttribute="baseline" id="0Mz-rH-Gyc"/>
+                            <constraint firstItem="07k-Et-bxF" firstAttribute="centerX" secondItem="OmS-sH-oOh" secondAttribute="centerX" id="EOl-IL-KK8"/>
+                            <constraint firstItem="lOn-LM-srC" firstAttribute="trailing" secondItem="h7x-uX-1SE" secondAttribute="trailing" constant="128" id="LOB-C4-Aiy"/>
+                            <constraint firstItem="07k-Et-bxF" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="P0i-DG-hUb"/>
+                            <constraint firstItem="2oN-lV-2JK" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="Tls-XS-duR"/>
+                            <constraint firstItem="h7x-uX-1SE" firstAttribute="top" secondItem="07k-Et-bxF" secondAttribute="bottom" constant="34" id="V3J-6j-h5s"/>
+                            <constraint firstItem="OmS-sH-oOh" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="V7P-YN-eHk"/>
+                            <constraint firstItem="h7x-uX-1SE" firstAttribute="top" secondItem="2oN-lV-2JK" secondAttribute="bottom" constant="8" id="fnQ-xX-9fA"/>
+                            <constraint firstItem="h7x-uX-1SE" firstAttribute="centerX" secondItem="lOn-LM-srC" secondAttribute="centerX" id="ro6-5q-Cwl"/>
+                            <constraint firstItem="OmS-sH-oOh" firstAttribute="top" secondItem="lOn-LM-srC" secondAttribute="top" id="sMA-QK-ETW"/>
+                            <constraint firstItem="2oN-lV-2JK" firstAttribute="centerX" secondItem="oQK-I0-gY1" secondAttribute="centerX" id="wvE-YQ-Tfd"/>
+                            <constraint firstItem="h7x-uX-1SE" firstAttribute="bottom" secondItem="lOn-LM-srC" secondAttribute="bottom" id="x26-dH-Zrn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lOn-LM-srC"/>
                     </view>
                     <connections>
+                        <outlet property="resultLabel" destination="2oN-lV-2JK" id="mgc-0s-SHP"/>
                         <outlet property="runButton" destination="oQK-I0-gY1" id="Seg-kv-YRE"/>
+                        <outlet property="runningSpinner" destination="07k-Et-bxF" id="5Od-GJ-ENQ"/>
                         <outlet property="textTextField" destination="6xI-ww-NF3" id="n0r-HZ-exd"/>
                     </connections>
                 </viewController>
