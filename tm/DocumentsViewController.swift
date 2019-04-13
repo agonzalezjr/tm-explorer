@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class DocumentsViewController: UITableViewController {
 
@@ -30,14 +31,12 @@ class DocumentsViewController: UITableViewController {
     let imageView = cell.contentView.viewWithTag(12345) as! UIImageView
 
     let url = URL(string: (self.response?.docs[indexPath.row].tsdrImageOriginal)!)
-
-    DispatchQueue.global().async {
-      let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-      DispatchQueue.main.async {
-        imageView.image = UIImage(data: data!)
-      }
-    }
+    imageView.kf.setImage(with: url)
 
     return cell
+  }
+
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 250
   }
 }

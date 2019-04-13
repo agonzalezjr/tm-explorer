@@ -34,7 +34,7 @@ class DocumentsInputViewController: UIViewController {
   var response: Response?
 
   override func viewDidLoad() {
-    self.textTextField.text = "Mickey Mouse"
+//    self.textTextField.text = "Mickey Mouse"
   }
 
   func success(_ count: Int) {
